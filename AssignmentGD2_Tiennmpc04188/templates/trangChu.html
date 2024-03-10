@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-3" ng-repeat="item in Subjects | limitTo:8:begin">
+        <div class="card mb-3">
+            <img src="accset/images/{{item.Logo}}" class="card-img-top img-thumbnail" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{item.id}}</h5>
+                <p class="card-title">{{item.Name}}</p>
+                <a href="#!quiz/{{}}" class="btn btn-danger">Thi thu</a>
+                <a href="#" class="btn btn-secondary">xem chi tiet</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer  ">
+        <nav aria-label="Page navigation example">
+            <ul class=" pager pagination justify-content-center ">
+                <li class="page-item ">
+                    <a class="page-link" href="javascript:;" ng-click="first()"><span class="bi bi-arrow-up"></span></a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link" href="javascript:;" ng-click="prev()"><span class="bi bi-arrow-left"></span></a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link" href="javascript:;" ng-click="next()"><span class="bi bi-arrow-right"></span></a>
+                </li>
+                <li class="page-item ">
+                    <a class="page-link" href="javascript:;" ng-click="last()"><span class="bi bi-arrow-down"></span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>  
+</div>

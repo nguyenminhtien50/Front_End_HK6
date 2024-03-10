@@ -1,0 +1,28 @@
+<div class="list-group" ng-controller="listQuiz">
+    <div class="list-group-item bg-infor">
+        <div class="d-flex justify-content-between align-items-center">
+            <h3>{{subject.Name}}</h3>
+            <h3><i class="bi bi-alarm"></i> 15:00</h3>
+            <button>Nộp bài</button>
+        </div>
+    </div>
+    <div class="list-group mb-3" ng-repeat="quiz in quizzes">
+        <ul class="list-group pb-1">
+            <li class="list-group-item bg-secondary text-light">
+                <label for="question{{$index+1}}" class="form-label">Câu hỏi {{$index+1}}: {{quiz.Text}}</label>
+            </li>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-end text-danger">
+                    Chọn 1 đáp án đúng
+                </div>
+            </li>
+            <li class="list-group-item" ng-repeat="answer in quiz.Answers">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question{{quiz.id}}" id="answer{{answer.id}}"
+                        value="{{answer.id}}">
+                    <label class="form-check-label" for="answer{{answer.id}}">{{answer.Text}}</label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ASMPC04188HTML">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <script src="accset/js/vendor/angular.min.js"></script>
+
+    <script src="accset/js/vendor/angular-route.js"></script>
+
+    <script src="accset/js/app/app.js"></script>
+    <style>
+        .error-input {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body class="bg-info-subtle" ng-controller="listProduct1">
+    <div class="container col-lg-4">
+        <div class="card mb-3 mt-3">
+            <div class="card ">
+                <div class="card-header">
+                    <h2 class=" bg-white p-2 text-center">ĐĂNG KÝ TÀI KHOẢN</h2>
+                </div>
+            </div>
+            <div class="card-body ">
+                <form classs="form form-label " name="frm">
+                    <div class="mb-3">
+                        <label class="form-label">Họ và tên</label>
+                        <input type="text" required class="form-control" ng-model="HoVaTen" id="HoVaTen" placeholder="Nhập họ và tên"
+                            name="HoVaTen">
+                        <span class="error-input error-input" ng-show="frm.HoVaTen.$invalid">Tên đăng nhập không được để
+                            trống</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="birthday" class="form-label">Ngày sinh</label>
+                        <input type="text" class="form-control" pattern="\d{2}/\d{2}/\d{4}" id="birthday" ng-model="birthday" name="birthday" placeholder="dd/mm/yyyy" required>
+                        <span class="error-input" ng-show="frm.birthday.$invalid">Ngày sinh không đúng định dạng </span>
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label>Username</label>
+                        <input type="text" required class="form-control" ng-model="username" id="username"
+                            placeholder="Tên đăng nhập" name="username">
+                        <span class="error-input" ng-show="frm.username.$invalid">Tên đăng nhập không được để
+                            trống</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputEmail" class="form-label">Email</label>
+                        <input type="email" required class="form-control" ng-model="email" id="email" placeholder="Nhập email" name="email">
+                        <span class="error-input" ng-show="frm.email.$invalid">Email không được để
+                            trống và phải đúng định dạng </span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputPassword" class="form-label">Mật khẩu</label>
+                        <input type="password" required class="form-control" ng-model="MatKhau" placeholder="Nhập mật khẩu" id="MatKhau"
+                            name="MatKhau">
+                            <span class="error-input" ng-show="frm.MatKhau.$invalid">Mật khẩu không được để
+                                trống </span>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
